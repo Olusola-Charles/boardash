@@ -1,7 +1,6 @@
 <template>
   <v-app>
-      <Home/>
-      <sideBar/>
+      <Main/>
     <v-main>
       <router-view> </router-view>
     </v-main>
@@ -9,15 +8,13 @@
 </template>
 
 <script>
-import Home from './components/Home';
-import sideBar from './components/sideBar';
+import Main from './components/Main';
 
 export default {
   name: 'App',
 
   components: {
-    Home,
-    sideBar
+    Main,
   },
 
   data: () => ({
