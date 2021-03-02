@@ -5,7 +5,7 @@
        BOARDASH
      </p> 
       <v-text-field placeholder="Search message, people, tickets" class="pt-4">
-          append-icon="mdi-forum"></v-text-field>
+          append-icon="mdi-circle"></v-text-field>
       <p class="pt-4 px-5">
         <v-icon>mdi-bell</v-icon>
         <v-text> set alert</v-text>
@@ -34,9 +34,7 @@
         Welcome Essie <br/>
         Super Admin
       </v-sheet>
-
       <v-divider></v-divider>
-
       <v-list>
         <v-list-item
           v-for="[icon, text] in links"
@@ -55,28 +53,6 @@
     </v-navigation-drawer>
 
     <v-main>
-      <v-container
-        class="py-8 px-2"
-        fluid
-      >
-       <v-container color="grey lighten-4" fluid>
-        <v-row>
-          <v-col cols="12">
-            <span pl-18>Messages</span>
-          <v-icon>fas fa-chevron-left</v-icon>1-50 pages
-          <v-icon>fas fa-chevron-right</v-icon>
-         </v-col>
-        </v-row>
-       </v-container>
-         <v-row>
-          <v-col
-            v-for="card in cards"
-            :key="card"
-            cols="12"
-          >
-            <v-card>
-              <v-subheader>{{ card }}</v-subheader>
-              <v-list three-line>
       <template v-for="(item, index) in items">
         <v-subheader
           v-if="item.header"
@@ -104,11 +80,6 @@
           </v-list-item-content>
         </v-list-item>
       </template>
-    </v-list>
-            </v-card>
-          </v-col>
-        </v-row>
-      </v-container>
     </v-main>
   </v-app>
 </template>
@@ -116,7 +87,6 @@
 <script>
   export default {
     data: () => ({
-      cards: ["today"],
       drawer: null,
       links: [
          ["mdi-view-dashboard", "Overview"],
