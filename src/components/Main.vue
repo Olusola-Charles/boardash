@@ -91,23 +91,25 @@
       </v-row>
      </v-container>
 
+    <v-item-group >
      <v-container class="py-1 px-6" fluid>
       <v-row>
        <v-col>
         <v-card height="100">
-         <v-btn fab color="grey lighten-3">
+         <v-btn fab color="grey lighten-3" class= "mx-16 my-4">
+          <v-icon color="blue"> mdi-forum </v-icon>
          </v-btn>
-         <v-btn fab color="grey lighten-3">
+         <v-btn fab color="grey lighten-3" class="mx-16 my-4">
           <v-icon color="blue">mdi-send </v-icon>
          </v-btn>
-         <v-btn fab color="grey lighten-3">
+         <v-btn fab color="grey lighten-3" class="mx-16 my-4">
          <v-icon color="blue">fas fa-reply</v-icon>
          </v-btn>
         </v-card>
        </v-col>
       </v-row>
      </v-container>
-
+    </v-item-group>
      <v-container class="py-1 px-6" fluid>
       <v-row>
        <v-col>
