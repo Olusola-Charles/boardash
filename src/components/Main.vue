@@ -16,12 +16,8 @@
       <v-icon>mdi-circle</v-icon>
     </v-system-bar>
 
-    <v-navigation-drawer
-      v-model="drawer"
-      app
-      permanent
-      clipped
-    >
+    <v-navigation-drawer v-model="drawer"
+      app permanent clipped >
       <v-sheet
         color="grey lighten-4"
         class="pa-7"
@@ -86,17 +82,10 @@
       <v-row>
        <v-col color="orange lighten-3">
         <v-card height="100" outlined color="orange accent-3">
-         <v-list three-line>
          <v-avatar class="mb-4" color="grey darken-1"
           size="40">
           <v-img src="http://cdn.vuetifyjs.com/images/lists/3.jpg"></v-img>
          </v-avatar>
-         <v-list-item-content>
-                <v-list-item-title v-html="All">Sales Presentation - Live Group Call</v-list-item-title>
-                <v-list-item-subtitle
-                ><span class="font-weight-bold">adams_ka@gmail.com</span>adams_ka@gmail.com</v-list-item-subtitle>
-        </v-list-item-content>
-        </v-list>
         </v-card>
        </v-col>
       </v-row>
@@ -106,26 +95,14 @@
       <v-row>
        <v-col>
         <v-card height="100">
-        <v-list two-line>
-         <v-btn fab mx-4 my -2 color="grey lighten-3">
-          <v-list-item-icon color="blue">mdi-forum </v-list-item-icon>
+         <v-btn fab color="grey lighten-3">
          </v-btn>
-          <v-list-item-content>
-                <v-list-item-title v-html="All">Overall Messages</v-list-item-title>
-                <v-list-item-subtitle
-                ><span class="font-weight-bold">2389</span>This month</v-list-item-subtitle>
-           </v-list-item-content>
-        </v-list>         
-        <v-divider vertical> </v-divider>
-          <span class="caption">Overall Messages. This year</span>
          <v-btn fab color="grey lighten-3">
           <v-icon color="blue">mdi-send </v-icon>
          </v-btn>
-          <span class="caption">Sent Messages 1494 </span>
          <v-btn fab color="grey lighten-3">
          <v-icon color="blue">fas fa-reply</v-icon>
          </v-btn>
-          <span class="caption">Received Messages.895. This year </span>
         </v-card>
        </v-col>
       </v-row>
