@@ -7,9 +7,6 @@
       <v-text-field placeholder="Search message, people, tickets" class="pt-4 mr-16">
           append-icon-outer="mdi-forum"></v-text-field>
      <v-spacer></v-spacer>
-     <v-spacer></v-spacer>
-     <v-spacer></v-spacer>
-     <v-spacer></v-spacer>
       <v-list-item one-line class="ml-16">
        <v-list-item-icon>
         <v-icon class="ml-16">mdi-bell</v-icon>
@@ -26,7 +23,7 @@
         <v-list-item-title> Essie Howell </v-list-item-title>
       </v-list-item-content>
     </v-list-item>
-      <v-icon>mdi-circle</v-icon>
+      <v-icon>mdi-plus-circle-outline</v-icon>
     </v-system-bar>
 
     <v-navigation-drawer v-model="drawer"
@@ -63,10 +60,6 @@
         </v-list-item>
        </v-list-item-group>
       </v-list>
-        <v-spacer></v-spacer>
-        <v-spacer></v-spacer>
-            <v-icon>fas fa-power-off</v-icon>
-            <v-list-item-title>Logout</v-list-item-title>
     </v-navigation-drawer>
 
     <v-main>
@@ -98,6 +91,7 @@
      <v-container class="" fluid>
      <v-card height="100" outlined color="orange accent-3">
       <v-row>
+      <v-col>
      <v-list-item three-line class="py-4">
       <v-list-item-avatar size="60">
            <v-img src="http://cdn.vuetifyjs.com/images/lists/2.jpg"></v-img>
@@ -112,15 +106,28 @@
         </v-list-item-subtitle>
       </v-list-item-content>
     </v-list-item>
+     </v-col>
+      <v-col class="my-6 py-5">
+       <v-btn>
+        <v-list-item one-line class="pb-3">
+       <v-list-item-icon>
+        <v-icon class="">mdi-video</v-icon>
+       </v-list-item-icon>
+      <v-list-item-content>
+        <v-list-item-title> Join Now </v-list-item-title>
+      </v-list-item-content>
+    </v-list-item>
+       </v-btn>
+      </v-col>
       </v-row>
      </v-card>
      </v-container>
 
-    <v-item-group>
+    <v-item-group class="py-1 px-6">
      <v-container class="" fluid>
         <v-card height="100">
-      <v-row>
-       <v-col class="px-2">
+      <v-row class="md-3">
+       <v-col>
      <v-list-item two-lines class="mx-1">
        <v-list-item-icon>
          <v-btn fab color="grey lighten-3">
@@ -128,8 +135,9 @@
          </v-btn>
        </v-list-item-icon>
         <v-list-item-content class="mr-1">
-        <v-list-item-title> Overall Message </v-list-item-title>
-        <v-list-item-title> 2389 </v-list-item-title>
+        <v-list-item-subtitle> Overall Message </v-list-item-subtitle>
+        <v-list-item-subtitle>
+        <strong> 2389 </strong> This month</v-list-item-subtitle>
       </v-list-item-content>
     </v-list-item>
        </v-col>
@@ -142,11 +150,13 @@
            </v-btn>
        </v-list-item-icon>
         <v-list-item-content class="pr-1">
-        <v-list-item-title> Sent Message </v-list-item-title>
-        <v-list-item-title> 1494 </v-list-item-title>
+        <v-list-item-subtitle> Sent Message </v-list-item-subtitle>
+        <v-list-item-subtitle> 
+         <strong> 1494 </strong>This month</v-list-item-subtitle>
       </v-list-item-content>
     </v-list-item>
        </v-col>
+     <v-divider vertical></v-divider>
     <v-col class="px-2">
      <v-list-item two-lines class="mx-1">
        <v-list-item-icon>
