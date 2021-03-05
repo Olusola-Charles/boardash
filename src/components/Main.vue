@@ -1,18 +1,31 @@
 <template>
   <v-app id="inspire">
     <v-system-bar app color="white" height="50">
-     <p class="font-weight-black pt-4 pr-8 pl-4">
+     <p class="font-weight-black pt-4 pr-8 pl-4 mr-16">
        BOARDASH
      </p> 
-      <v-text-field placeholder="Search message, people, tickets" class="pt-4">
+      <v-text-field placeholder="Search message, people, tickets" class="pt-4 mr-16">
           append-icon-outer="mdi-forum"></v-text-field>
-      <p class="pt-4 px-5">
-        <v-icon>mdi-bell</v-icon>
-        <v-text> set alert</v-text>
-      </p>
-     <v-avatar size="40" class="6">
+     <v-spacer></v-spacer>
+     <v-spacer></v-spacer>
+     <v-spacer></v-spacer>
+     <v-spacer></v-spacer>
+      <v-list-item one-line class="ml-16">
+       <v-list-item-icon>
+        <v-icon class="ml-16">mdi-bell</v-icon>
+       </v-list-item-icon>
+      <v-list-item-content>
+        <v-list-item-title> Set Alert </v-list-item-title>
+      </v-list-item-content>
+    </v-list-item>
+     <v-list-item one-line class="ml-16">
+       <v-list-item-avatar size="40" class="ml-16">
       <v-img src="http://cdn.vuetifyjs.com/images/lists/3.jpg"></v-img>
-     </v-avatar><p class="pl-2 pr-5 pt-1">Essie Howell</p>
+       </v-list-item-avatar>
+        <v-list-item-content class="mr-1">
+        <v-list-item-title> Essie Howell </v-list-item-title>
+      </v-list-item-content>
+    </v-list-item>
       <v-icon>mdi-circle</v-icon>
     </v-system-bar>
 
@@ -22,12 +35,15 @@
         color="grey lighten-4"
         class="pa-7"
       >
-        <v-avatar class="mb-4" color="grey darken-1"
-          size="40" tile>
+     <v-list-item two-lines>
+       <v-list-item-avatar size="40" tile>
          <v-img src="http://cdn.vuetifyjs.com/images/lists/3.jpg"></v-img>
-        </v-avatar>
-        <v-text class="pl-2 pr-5 pt-5">Welcome Essie <br/>
-        Super Admin</v-text>
+       </v-list-item-avatar>
+        <v-list-item-content class="mr-1">
+        <v-list-item-title> Essie Howell </v-list-item-title>
+        <v-list-item-subtitle> Super Admin </v-list-item-subtitle>
+      </v-list-item-content>
+    </v-list-item>
       </v-sheet>
       <v-divider></v-divider>
       <v-list>
@@ -100,44 +116,45 @@
      </v-card>
      </v-container>
 
-    <v-item-group >
+    <v-item-group>
      <v-container class="" fluid>
         <v-card height="100">
       <v-row>
-       <v-col>
-     <v-list-item two-lines class="">
+       <v-col class="px-2">
+     <v-list-item two-lines class="mx-1">
        <v-list-item-icon>
          <v-btn fab color="grey lighten-3">
           <v-icon color="blue"> mdi-forum </v-icon>
          </v-btn>
        </v-list-item-icon>
-        <v-list-item-content>
+        <v-list-item-content class="mr-1">
         <v-list-item-title> Overall Message </v-list-item-title>
         <v-list-item-title> 2389 </v-list-item-title>
       </v-list-item-content>
     </v-list-item>
        </v-col>
-    <v-col>
-     <v-list-item two-lines class="">
-       <v-list-item-icon>
+     <v-divider vertical></v-divider>
+    <v-col class="px-2">
+     <v-list-item two-lines class="px-1">
+       <v-list-item-icon class="pl-1">
            <v-btn fab color="grey lighten-3">
              <v-icon color="blue"> mdi-send </v-icon>
            </v-btn>
        </v-list-item-icon>
-        <v-list-item-content>
+        <v-list-item-content class="pr-1">
         <v-list-item-title> Sent Message </v-list-item-title>
         <v-list-item-title> 1494 </v-list-item-title>
       </v-list-item-content>
     </v-list-item>
        </v-col>
-    <v-col>
-     <v-list-item two-lines class="">
+    <v-col class="px-2">
+     <v-list-item two-lines class="mx-1">
        <v-list-item-icon>
          <v-btn fab color="grey lighten-3">
           <v-icon color="blue"> fas fa-reply</v-icon>
          </v-btn>
        </v-list-item-icon>
-        <v-list-item-content>
+        <v-list-item-content class="mr-1">
         <v-list-item-title> Received Message </v-list-item-title>
         <v-list-item-title> 879 </v-list-item-title>
       </v-list-item-content>
