@@ -5,14 +5,14 @@
        BOARDASH
      </p> 
       <v-text-field placeholder="Search message, people, tickets" class="pt-4">
-          append-icon="mdi-forum"></v-text-field>
+          append-icon-outer="mdi-forum"></v-text-field>
       <p class="pt-4 px-5">
         <v-icon>mdi-bell</v-icon>
         <v-text> set alert</v-text>
       </p>
      <v-avatar size="40" class="6">
       <v-img src="http://cdn.vuetifyjs.com/images/lists/3.jpg"></v-img>
-     </v-avatar><p class="pl-2 pr-5 pt-5">Essie Howell</p>
+     </v-avatar><p class="pl-2 pr-5 pt-1">Essie Howell</p>
       <v-icon>mdi-circle</v-icon>
     </v-system-bar>
 
@@ -23,11 +23,11 @@
         class="pa-7"
       >
         <v-avatar class="mb-4" color="grey darken-1"
-          size="40">
+          size="40" tile>
          <v-img src="http://cdn.vuetifyjs.com/images/lists/3.jpg"></v-img>
         </v-avatar>
-        Welcome Essie <br/>
-        Super Admin
+        <v-text class="pl-2 pr-5 pt-5">Welcome Essie <br/>
+        Super Admin</v-text>
       </v-sheet>
       <v-divider></v-divider>
       <v-list>
@@ -47,6 +47,7 @@
         </v-list-item>
        </v-list-item-group>
       </v-list>
+        <v-spacer></v-spacer>
         <v-spacer></v-spacer>
             <v-icon>fas fa-power-off</v-icon>
             <v-list-item-title>Logout</v-list-item-title>
@@ -78,38 +79,75 @@
       </v-row>
      </v-container>
 
-     <v-container class="py-1 px-6" fluid>
+     <v-container class="" fluid>
+     <v-card height="100" outlined color="orange accent-3">
       <v-row>
-       <v-col color="orange lighten-3">
-        <v-card height="100" outlined color="orange accent-3">
-         <v-avatar class="mb-4" color="grey darken-1"
-          size="40">
-          <v-img src="http://cdn.vuetifyjs.com/images/lists/3.jpg"></v-img>
-         </v-avatar>
-        </v-card>
-       </v-col>
+     <v-list-item three-line class="py-4">
+      <v-list-item-avatar size="60">
+           <v-img src="http://cdn.vuetifyjs.com/images/lists/2.jpg"></v-img>
+      </v-list-item-avatar>
+      <v-list-item-content>
+        <v-list-item-title>Sales Presentation - Live Group Call</v-list-item-title>
+        <v-list-item-title>
+          adams_ka@gmail.com,
+        </v-list-item-title>
+        <v-list-item-subtitle>
+          Started 3 minutes ago
+        </v-list-item-subtitle>
+      </v-list-item-content>
+    </v-list-item>
       </v-row>
+     </v-card>
      </v-container>
 
     <v-item-group >
-     <v-container class="py-1 px-6" fluid>
+     <v-container class="" fluid>
+        <v-card height="100">
       <v-row>
        <v-col>
-        <v-card height="100">
-         <v-btn fab color="grey lighten-3" class= "mx-16 my-4">
+     <v-list-item two-lines class="">
+       <v-list-item-icon>
+         <v-btn fab color="grey lighten-3">
           <v-icon color="blue"> mdi-forum </v-icon>
          </v-btn>
-         <v-btn fab color="grey lighten-3" class="mx-16 my-4">
-          <v-icon color="blue">mdi-send </v-icon>
+       </v-list-item-icon>
+        <v-list-item-content>
+        <v-list-item-title> Overall Message </v-list-item-title>
+        <v-list-item-title> 2389 </v-list-item-title>
+      </v-list-item-content>
+    </v-list-item>
+       </v-col>
+    <v-col>
+     <v-list-item two-lines class="">
+       <v-list-item-icon>
+           <v-btn fab color="grey lighten-3">
+             <v-icon color="blue"> mdi-send </v-icon>
+           </v-btn>
+       </v-list-item-icon>
+        <v-list-item-content>
+        <v-list-item-title> Sent Message </v-list-item-title>
+        <v-list-item-title> 1494 </v-list-item-title>
+      </v-list-item-content>
+    </v-list-item>
+       </v-col>
+    <v-col>
+     <v-list-item two-lines class="">
+       <v-list-item-icon>
+         <v-btn fab color="grey lighten-3">
+          <v-icon color="blue"> fas fa-reply</v-icon>
          </v-btn>
-         <v-btn fab color="grey lighten-3" class="mx-16 my-4">
-         <v-icon color="blue">fas fa-reply</v-icon>
-         </v-btn>
-        </v-card>
+       </v-list-item-icon>
+        <v-list-item-content>
+        <v-list-item-title> Received Message </v-list-item-title>
+        <v-list-item-title> 879 </v-list-item-title>
+      </v-list-item-content>
+    </v-list-item>
        </v-col>
       </v-row>
+        </v-card>
      </v-container>
     </v-item-group>
+
      <v-container class="py-1 px-6" fluid>
       <v-row>
        <v-col>
