@@ -1,19 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boardash</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <script
+      src="https://kit.fontawesome.com/a60085121c.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
+    <div class="body-container">
+      <!-- Navigation bar -->
+      <nav class="navbar">
+        <div class="topnav">
+          <a class="brand-name" href="#home">Boardash</a>
+          <div class="search-container">
+            <form>
+              <input
+                type="text"
+                placeholder="Search message, people, ticket.."
+              />
+              <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+          </div>
+          <div class="alarm">
+            <i class="fas fa-bell"></i><a href="#"><span>Set Alert</span></a>
+          </div>
+          <div class="nav-profile">
+            <img
+              class="avatar round"
+              src="http://cdn.vuetifyjs.com/images/lists/4.jpg"
+              alt=""
+            /><a href="#"> <span>Essie Howell</span></a>
+            <a href="#"><i class="fas fa-plus-circle circle-add"></i></a>
+          </div>
+        </div>
+      </nav>
+      <!-- End of Navigation bar -->
+      <!-- Main COntent -->
+      <div class="main-content">
+        <!-- side panel -->
+        <div class="side-panel">
+          <i class="fas fa-bookmark profile-icon"></i>
+          <div class="side-panel-profile">
+            <img
+              class="avatar square"
+              src="http://cdn.vuetifyjs.com/images/lists/4.jpg"
+              alt=""
+            /><a href="#">
+            <div class="profile-title"><h6 class="welcome"> Welcome Essie</h6>
+                <h6>Super Admin</h6></a>
+            </div>
+          </div>        
+          <div class="side-panel-icon"><ul>
+              <li class="list-item"><a href="index.html"><i id="icon" class="material-icons">dashboard</i> <span class="icon-text">Overview</span></a></li>
+              <li class="list-item"><a href="features.html"><i id="icon" class="fas fa-bookmark"></i> <span class="icon-text">Reservation</span></a></li>
+              <li class="list-item"><a href="meetings.html"><i id="icon" class="fas fa-briefcase"></i> <span class="icon-text">Meetings</span></a></li>
+              <li class="list-item"><a href="contact.html"><i id="icon" class="fas fa-user-friends"></i><span class="icon-text">Customers</span></a></li>
+              <li class="list-item"><a href="ticket.html"><i id="icon" class="fas fa-ticket-alt"></i><span class="icon-text">Tickets</span></a></li>
+              <li class="list-item"><a href="message.html"><i id="icon" class="material-icons">forum</i><span class="icon-text">Messages</span></a></li>
+              <li class="list-item"><a href="profile.html"><i id="icon" class="fas fa-user"></i><span class="icon-text">Profile</span></a></li>
+           </ul>
+           <ul><li class="list-item"><a href="logout.html"><i id="icon" class="fas fa-power-off"></i><span class="icon-text">Logout</span></a></li></ul>
+          </div>         
+        </div>
+        <!-- End of side panel -->
+        <!-- Message Display -->
+        <div class="message-display">
+          <!-- Message Control -->
+          <div class="message-control">
+            <span href="#" class="title">Message</span>
+              
+            <div class="pagination">
+              <div class="page">
+                <a href="#"><i class="fas fa-less-than"></i></a>
+                <a href="#">1</a><span>-</span>
+                <a href="#">50</a><span>pages</span>
+                <a href="#"><i class="fas fa-greater-than"></i></a>
+              </div>
+              <div><button class="button-active"><a href="messages.html">All</a></button></div>  
+              <div class="message-indicator">   
+                <button class="button joined"><a href="unread.html">Unread</a></button>
+                <button class="button joined"><a href="important.html">Important</a></button>
+              </div>
+            </div>
+          </div>
+          <!-- End of Message Control -->
+          <!-- Overlay banner -->
+          <div class="overlay-banner">
+            <img class="avatar-large" src="http://cdn.vuetifyjs.com/images/lists/4.jpg" alt="" />
+            <div class="white-text">
+              <h5>Sales Presentation- Live Group Call</h3>
+              <h4>adams_ka@gmail.com</h4>
+              <h5 class="text-secondary">Started 3 min ago</h5>
+            </div>
+            <div class="more white-text">
+              <h6>+5 more</h6>          
+            </div>
+            <div class="invite-link">
+              <a href="#">You're invited</a>
+            </div>
+            <div class="video-link">
+              <i class="fas fa-video"></i>
+              <a class="button primary">Join now</a>
+            </div>
+          </div>
+          <!-- End of Overlay banner -->
+          <!-- Message Board -->
+          <section class="message-board">
+            <div class="single-message-notification">
+              <div class="icon-round">
+                <i class="material-icons">forum</i>
+              </div>
+              <div class="message-text">
+                <span>Overall Messages </span><br />
+                <span class="primary">2389</span><span class="secondary"> This month</span>
+              </div>
+            </div>
+             
+             <div class="single-message-notification">
+               <div class="icon-round">
+                 <i class="material-icons">send</i>
+               </div>
+               <div class="message-text">
+                  <span>Sent Messages </span><br />
+                  <span class="primary"> 1494</span><span class="secondary"> This month</span>
+               </div>
+              </div>
+            <div class="single-message-notification">
+              <div class="icon-round">
+                <i class="fas fa-reply fa-flip-vertical fa-2x"></i>
+              </div>
+                <div class="message-text">
+                  <span>Received Messages </span><br />
+                  <span class="primary">895</span><span class="secondary"> This month</span>
+                </div>
+            </div>
+          </section>
+          <!-- End of Message Board-->
+          <!-- Message Items -->
+          <div class="message-item-card">
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+            <img class="avatar" src="http://cdn.vuetifyjs.com/images/lists/4.jpg" alt="" />
+            <h6 class="name">Emilly Grace</h6>
+            <h6 class="subject">User Testing</h6>
+            <p class="message-50">
+              I firmly believe in the effectiveness of a leading leader. This is a serious....
+            </p>
+            <a href=""><i class="fas fa-ellipsis-v"></i></a>
+          </div>
+          <div class="message-item-card">
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+            <img class="avatar" src="http://cdn.vuetifyjs.com/images/lists/4.jpg" alt="" />
+            <h6 class="name">Emilly Grace</h6>
+            <h6 class="subject">User Testing</h6>
+            <p class="message-50">
+              I firmly believe in the effectiveness of a leading leader. This is a serious....
+            </p>
+            <a href=""><i class="fas fa-ellipsis-v"></i></a>
+          </div>
+          <div class="message-item-card">
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+            <img class="avatar" src="http://cdn.vuetifyjs.com/images/lists/4.jpg" alt="" />
+            <h6 class="name">Emilly Grace</h6>
+            <h6 class="subject">User Testing</h6>
+            <p class="message-50">
+              I firmly believe in the effectiveness of a leading leader. This is a serious....
+            </p>
+            <a href=""><i class="fas fa-ellipsis-v"></i></a>
+          </div>
+          <div class="message-item-card">
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+            <img class="avatar" src="http://cdn.vuetifyjs.com/images/lists/4.jpg" alt="" />
+            <h6 class="name">Emilly Grace</h6>
+            <h6 class="subject">User Testing</h6>
+            <p class="message-50">
+              I firmly believe in the effectiveness of a leading leader. This is a serious....
+            </p>
+            <a href=""><i class="fas fa-ellipsis-v"></i></a>
+          </div>
+          <div class="message-item-card">
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+            <img class="avatar" src="http://cdn.vuetifyjs.com/images/lists/4.jpg" alt="" />
+            <h6 class="name">Emilly Grace</h6>
+            <h6 class="subject">User Testing</h6>
+            <p class="message-50">
+              I firmly believe in the effectiveness of a leading leader. This is a serious....
+            </p>
+            <a href=""><i class="fas fa-ellipsis-v"></i></a>
+          </div>
+          <div class="message-item-card">
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+            <img class="avatar" src="http://cdn.vuetifyjs.com/images/lists/4.jpg" alt="" />
+            <h6 class="name">Emilly Grace</h6>
+            <h6 class="subject">User Testing</h6>
+            <p class="message-50">
+              I firmly believe in the effectiveness of a leading leader. This is a serious....
+            </p>
+            <a href=""><i class="fas fa-ellipsis-v"></i></a>
+          </div>
+          <div class="message-item-card">
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+            <img class="avatar" src="http://cdn.vuetifyjs.com/images/lists/4.jpg" alt="" />
+            <h6 class="name">Emilly Grace</h6>
+            <h6 class="subject">User Testing</h6>
+            <p class="message-50">
+              I firmly believe in the effectiveness of a leading leader. This is a serious....
+            </p>
+            <a href=""><i class="fas fa-ellipsis-v"></i></a>
+          </div>
+          <!-- End of Message Items -->
+        </div>
+        <!-- End of Message Display -->
+      </div>
+      <!-- End of Main Content -->
+    </div>
   </body>
 </html>
